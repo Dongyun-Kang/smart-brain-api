@@ -23,9 +23,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send(database.users);
-});
+app.get('/', (req, res) => { res.send('It is working!'); });
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) });
 
@@ -38,5 +36,5 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) });
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) });
 
 app.listen(process.env.PORT || 3000, process.env.IP, function () {
-  console.log("The SmartBrain Server Has Started!!!");
+  console.log(`The SmartBrain Server Has Started on port ${process.env.PORT || 3000}`);
 });
