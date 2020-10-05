@@ -13,9 +13,6 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - CLARIFAI_API_KEY=4d3747c0593249f9b92935d3a298ab0d
-      # - DATABASE_URL=postgres://opphniiakwxelg:21d1ebc8eb694f24b329f4dd33bf71c8d81f4634eb2d9b8f98c39ff80f6501a7@ec2-3-234-169-147.compute-1.amazonaws.com:5432/dctqbmr2ocj0pf
-      - DATABASE_URL=postgres://dongyun:secret@postgres:5432/smart-brain
       - REDIS_URI=redis://redis:6379
     volumes:
       - ./:/usr/src/smart-brain-api
