@@ -27,10 +27,10 @@ services:
       POSTGRES_HOST: postgres
     build: ./postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
   # Redis
   redis:
     image: redis
     ports:
-      - "6379:6379"
+      - "6380:6379"
